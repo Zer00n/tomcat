@@ -6,11 +6,13 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 
-RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-RUN wget -C http://mirrors.163.com/.help/CentOS6-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo
-RUN yum clean all
-RUN yum makecache
-RUN yum update
+#RUN yum install -y wget
+#RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+#ADD CentOS6-Base-163.repo /home/
+#RUN mv /home/CentOS6-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo
+#RUN yum clean all
+#RUN yum makecache
+#RUN yum update
 
 ADD fonts-chinese-3.02-12.el5.noarch.rpm /home/
 RUN rpm -ivh /home/fonts-chinese-3.02-12.el5.noarch.rpm
