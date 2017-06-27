@@ -1,4 +1,4 @@
-FROM centos6.9
+FROM centos:6.9
 MAINTAINER Zer0_0n “41852518@qq.com”
 
 ENV CATALINA_HOME /usr/local/tomcat
