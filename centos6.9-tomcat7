@@ -40,3 +40,9 @@ EXPOSE 8080
 #ENTRYPOINT /usr/local/web/tomcat/bin/startup.sh && tail -f /usr/local/web/tomcat/logs/catalina.out
 CMD ["catalina.sh", "run"]
 
+==========================================
+
+docker build -t zer00n/centos-jdk8-tomcat7 .
+
+docker run -d -p 8090:8080 zer00n/centos-jdk8-tomcat7 
+
