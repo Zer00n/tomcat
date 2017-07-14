@@ -1,0 +1,26 @@
+{
+   "apiVersion": "v1",
+   "kind": "Pod",
+   "metadata": {
+                 "name": "tomcat-mysql",
+                 "labels": {
+                             "app": "web"
+                           }
+               },
+    "spec": {
+       "containers": [{
+                       "name": "tomcat",
+                       "image": "tomcat-7",
+                       "ports": [{
+                                  "containerPort": "80"
+                                 }]
+                      }, 
+                      {
+                       "name": "mysql",
+                       "image": "mysql5.5:v1",
+                       "ports": [{
+                                  "containerPort": "3306"
+                                 }]
+                      }]
+            }
+}
